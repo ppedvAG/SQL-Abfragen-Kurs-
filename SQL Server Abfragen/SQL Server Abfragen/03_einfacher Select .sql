@@ -109,11 +109,17 @@ from orders
 
 
 
-select * from [Order Details]
+select * from [Order Details] --2155
 
 
+select orderid, freight as Netto, freight *1.19 as Brutto from orders
 
+select sp from tabelle  STRG + SHIFT + R
 
+--Gebe zusätzlich den Anteil der MwSt aus
+select orders, Netto, Brutto, MwSt from orders
 
-
+select orderid, freight as Netto, freight *1.19 as Brutto ,
+(freight *1.19)- freight as Mwst
+from orders
 
