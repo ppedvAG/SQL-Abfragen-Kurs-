@@ -1,34 +1,34 @@
---WHERE
+--WHERE.. für Filterung und Performance zuständig
 
 /*
 
-select 
-...
-from
+..kommt immer nach dem From (inkl Joins)
+select ...from
 where 
 
+Vergleichsoperatoren
 
 > < != =  <=  >=
 
 between
+vereinfacht Bereichsabfrage mit AND auf diesselbe Spalte
 where sp >= Wert and Sp <= Wert
+einfacher ...
 where sp between Wert1 and Wert2
+kann nie Wildcards haben
 
 in 
-ersetzt viele or mit gleicher Spalte
+ersetzt viele or Anweisungen mit gleicher Spalte
 kann nie Wildcards haben
 
 and or
 Bedingungen können verknüpft werden,
-allerdings müssen die Spalten wiederholt werden...
---einfacher dann mit in und between
-
---Suchen nach allen Kunden (Customers) aus UK USA und Germany
+wichtig: Klammern setzen. SQL bindet immer das AND stärker
 
 
 Wildcardsuchen
 
-like 
+geht nur mit like 
 Wildcards
 
 %  steht für beliebig viele Zeichen .. auch 0
@@ -39,9 +39,6 @@ Wildcards
 	[abdkl] a oder b oder d oder k oder l
 
 --Wildcard für genau eine unbekannte Position: _
-
-
-
 
 
 */
@@ -229,3 +226,40 @@ select * from customers where
 
 
 	--Suche nach 
+
+
+--Suche nach alle Kunden, die
+--entweder aus UK, USA --oder Frankreich stammen
+--und die aus Berlin oder Rom 
+--kommen undund im Firmennamen eine A haben
+
+
+--Customers: Country, city, Companyname
+
+--das AND ist immer stärker binden
+--immer Klammern schreiben
+select * from customers
+where 
+		(country in ('UK', 'USA', 'France')
+		OR
+		CITY in ('Berlin', 'rom')) --blabla
+		AND
+		Companyname like '%A%'
+
+
+
+
+
+
+
+select * into o1 from orders --Kopie der Orders
+
+update o1 set freight = NULL 
+where shipcity = 'London'
+
+select * from o1
+
+select * from o1 where freight <1 
+
+select * from o1 where freight < 1
+

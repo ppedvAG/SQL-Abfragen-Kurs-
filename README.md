@@ -1,6 +1,7 @@
 # SQL Abfragen Kurs 
 
 
+
 # Systemfunktionen
 * Datumspielereien
 * Text auslesen
@@ -14,6 +15,11 @@
 
 
 # Join
+* LEFT RIGHT INNER FULL
+* CROSS JOIN
+
+
+
 
 # total kompliziertes Zeug
  
