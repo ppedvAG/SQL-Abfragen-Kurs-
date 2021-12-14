@@ -10,7 +10,7 @@ SELECT
 	Mathe,
 	* steht für alle Spalten aus dem From
 FROM
-	TABELLE
+	TABELLE  oder was tabellenartiges
 
 */
 
