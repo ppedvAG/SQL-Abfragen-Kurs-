@@ -37,6 +37,9 @@
 
 # Sichten 
 
+# CASE
+
+# Exkur CTE
 
 # Variablen
 
