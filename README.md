@@ -18,19 +18,25 @@
 * LEFT RIGHT INNER FULL
 * CROSS JOIN
 
+# Unterabfragen
 
+# order by
+* top percent with ties
 
-
-# total kompliziertes Zeug
- 
+# Aggregate
+* group by
+* rollup cube
 
 # UNION EXCEPT INTERSECT
-
 
 # temp Tabellen
 
 # group by
 * Aggregate
+* having
+
+# Sichten 
+
 
 # Variablen
 
