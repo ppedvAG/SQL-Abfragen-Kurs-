@@ -34,19 +34,23 @@ dazu ist notwendig:
 1. Anlegene einer Variablen vor Ausführung der Proz(dort kommt das Ergebnis rein)
 2. Prozedure muss Ausgabe (output) beherrschen
 
-	create pro gpxy @par1 int, @par2 int output <--!!
+	create proc gpxy @par1 int, @par2 int output <--!!
 
 3. Beim Aufruf der Prozedur kann allerdings Outputparameter aber auch input sein
 	Daher output angeben, wenn output gewünscht.
 	Macht man das nicht, dann gilt es als Eingabeparameter
 	
-	decalre @var int
+	declare @var int
 	exec gpxy @par1=10, @par2 = @var output
 	select @var -- Variable enthält das Ergebnis der Proc
 
-	decalre @var int= 333
+	declare @var int= 333
 	exec gpxy @par1=10, @par2 = @var 
 	select @var -- Variable enthält 333 und die Prozedur kommt den Wert 333 zur Verarbeitung
+
+
+	..und wenn Tabellen... #t..leider nicht, sondern ##t
+
 
 
 */
