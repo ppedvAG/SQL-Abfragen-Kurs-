@@ -54,9 +54,64 @@ from
 			where cat.CategoryName like 'Bev%' order by 1
 
 
+---DELETE
+
+delete from tabelle where sp = Wert
+delete tabelle  
+
+begin tran
+select @@TRANCOUNT
+delete from orders2 where orderid = 10250
+rollback
+
+delete  orders2
+--select * 
+from orders2 where 
+customerid in (select customerid from customers where country = 'Germany')
+
+rollback
+
+--Lösche alle Bestellungen (aber mit TX)
+--die vom Ang King verkauft wurden...
+
+
+begin tran
+select * 
+from	 orders2 o
+		inner join employees e on e.employeeid = o.employeeid
+		where lastname = 'King'
+delete  orders2 
+-- select * 
+from	 orders2 o
+		inner join employees e on e.employeeid = o.employeeid
+		where lastname = 'King'
+select * 
+from	 orders2 o
+		inner join employees e on e.employeeid = o.employeeid
+		where lastname = 'King'
+Rollback
+select * 
+from	 orders2 o
+		inner join employees e on e.employeeid = o.employeeid
+		where lastname = 'King'
+
+
+drop table orders2
+select * into orders2 from orders
+
+
+
 select @@TRANCOUNT
 update orders2 set freight = freight *100
 rollback
+
+select * from orders2
+
+--Lösche die Frachtkosten von Best 10248
+
+update orders2 set freight = NULL  where orderid = 10248
+
+
 
 
 
