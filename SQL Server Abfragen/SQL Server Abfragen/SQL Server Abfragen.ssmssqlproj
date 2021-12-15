@@ -133,6 +133,12 @@
           <AssociatedConnUserName />
           <FullPath>22_INSERT.sql</FullPath>
         </FileNode>
+        <FileNode Name="30_DEL_UP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>30_DEL_UP.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLQuery1.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
@@ -150,6 +156,12 @@
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Tag2_Wiederholung.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Tag3_Wiederholung.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Tag3_Wiederholung.sql</FullPath>
         </FileNode>
         <FileNode Name="x_Exkurs CTE.sql">
           <AssociatedConnectionMoniker />
